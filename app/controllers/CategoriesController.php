@@ -35,8 +35,8 @@ class CategoriesController extends BaseController{
             ->withInput();
     }
     
-    public function postDestroy($id) {
-        $category = Category::find($id);
+    public function postDestroy() {
+        $category = Category::find(Input::get('id'));
         
         if($category){
             $category->delete();
