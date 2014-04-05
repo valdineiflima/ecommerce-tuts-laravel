@@ -12,7 +12,19 @@ class CreateProductsTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+            Schema::create('products', function($table){
+                        $table->engine = 'InnoDB';
+                
+			$table->increments('id');
+			$table->integer('category_id')->unsigned();
+			$table->foreign('category_id')->references('id')->on('categories');
+			$table->string('title');
+			$table->text('description');
+			$table->decimal('price', 6, 2);
+			$table->boolean('availability')->default(1);
+			$table->string('image');
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +34,7 @@ class CreateProductsTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+            Schema::dropIfExists('products');
 	}
 
 }
