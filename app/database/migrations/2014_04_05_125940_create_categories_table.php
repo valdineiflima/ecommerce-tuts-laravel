@@ -12,7 +12,11 @@ class CreateCategoriesTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+            Schema::create('categories', function($table){
+                $table->increments('id');
+                $table->string('name');
+                $table->timestamps();
+            });
 	}
 
 	/**
@@ -22,7 +26,7 @@ class CreateCategoriesTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+            Schema::dropIfExists('categories');
 	}
 
 }
