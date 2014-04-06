@@ -58,5 +58,18 @@ class ProductsController extends BaseController{
             ->with('message', "Something went wrong. Please try again.");
     }
         
+     public function postToggleAvailability() {
+        $product = Product::find(Input::get('id'));
+        if($product){
+            $product->availability = Input::get('availability');
+            $product->save();
+            
+            return Redirect::to('admin/products/index')
+                ->with('message', 'Product updated');
+            
+        }
         
+        return Redirect::to('admin/products/index')
+            ->with('message', 'Invalid product');
+    }   
 }
