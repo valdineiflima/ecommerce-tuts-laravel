@@ -37,7 +37,7 @@
                                 <a href="#">Shop by Category {{ HTML::image('img/down-arrow.gif', 'Shop by Category') }}</a>
                                 <ul>
                                     @foreach($catnav as $cat)
-                                    <li>{{ HTML::link('/store/category/'.$cat->id, $cat->name) }} </li>
+                                        <li>{{ HTML::link('/store/category/'.$cat->id, $cat->name) }} </li>
                                     @endforeach
                                 </ul>
                             </li>
@@ -97,6 +97,7 @@
 
             <hr />
 
+            @yield('pagination')
             <footer>
                 <section id="contact">
                     <h3>For phone orders please call 1-800-000. You<br>can also email us at <a href="mailto:office@shop.com">office@shop.com</a></h3>
