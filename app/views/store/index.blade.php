@@ -25,15 +25,18 @@
                     'height' => '127')) 
                 }}</a>
                 <h3><a href="/store/view/ {{ $product->id }}">{{ $product->title }}</a></h3>
-                <p>This is a short description.This is a short description.This is a short description
-                This is a short description.This is a short description.This is a short description</p>
+                <p>{{ $product->description }}</p>
             
 
-                <h5>Availability: <span class="instock">In Stock</span></h5>
+                <h5>Availability: 
+                    <span class="{{ Availability::displayClass($product->availability)}}">
+                        {{ Availability::display($product->availability)}}
+                    </span>
+                </h5>
 
                 <p>
                     <a href="#" class="cart-btn">
-                        <span class="price">$499.00</span>
+                        <span class="price">${{ $product->price }}</span>
                         {{ HTML::image('img/white-cart.gif', 'Add to Cart') }}
                     </a>
                 </p>
