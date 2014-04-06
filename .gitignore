@@ -8,4 +8,5 @@ composer.lock
 /app/storage
 Thumbs.db
 /nbproject
+/public/img/products
 *~
