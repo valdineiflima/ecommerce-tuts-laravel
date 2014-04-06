@@ -10,5 +10,8 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', array('uses' => 'StoreController@getIndex'));
+
 Route::controller('admin/categories', 'CategoriesController');
 Route::controller('admin/products', 'ProductsController');
+Route::controller('store', 'StoreController');
