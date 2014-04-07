@@ -451,6 +451,15 @@ header a:link, header a:visited {
     margin-bottom: 20px;
 }
 
+#main-content p.error{
+    background-color: #f6f6f6;
+    color: #5daad0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 30px;
+    border: 1px solid gray;
+}
+
 /* --- categories-menu & my-account-menu ---*/
 
 #categories-menu,
