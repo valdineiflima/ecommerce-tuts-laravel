@@ -65,7 +65,6 @@
                                             {{ HTML::image('img/down-arrow.gif', Auth::user()->firstname) }}
                                         </a>
                                         <ul>
-                                            <li><a href="#">Order History</a></li>
                                             @if(Auth::user()->admin == 1)
                                                 <li>{{ HTML::link('admin/categories', 'Manage Categories') }}</li>
                                                 <li>{{ HTML::link('admin/products', 'Manage Products') }}</li>
@@ -91,7 +90,7 @@
                     </div><!-- end user-menu -->
 
                     <div id="view-cart">
-                        <a href="#">{{ HTML::image('img/blue-cart.gif', 'View Cart') }} View Cart</a>
+                        <a href="store/cart">{{ HTML::image('img/blue-cart.gif', 'View Cart') }} View Cart</a>
                     </div><!-- end view-cart -->
                 </section><!-- end action-bar -->
             </header>
@@ -124,8 +123,7 @@
                         <ul>
                             <li><a href="#">Sign In</a></li>
                             <li><a href="#">Sign Up</a></li>
-                            <li><a href="#">Order History</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
+                            <li><a href="store/cart">Shopping Cart</a></li>
                         </ul>
                     </div><!-- end my-account -->
                     <div id="info">

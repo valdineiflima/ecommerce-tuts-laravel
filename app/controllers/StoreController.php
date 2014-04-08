@@ -52,4 +52,10 @@ class StoreController extends BaseController{
         return View::make('store.cart')
             ->with('products', Cart::contents());
     }
+    
+    public function getRemoveitem($identifier){
+        $item = Cart::item($identifier);
+        $item->remove();
+        return Redirect::to('store/cart');
+    }
 }
