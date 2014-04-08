@@ -6,7 +6,10 @@
 	"require": {
 		"laravel/framework": "4.1.*",
                 "barryvdh/laravel-ide-helper": "1.*",
-                "intervention/image": "dev-master"
+                "intervention/image": "dev-master",
+                "guzzlehttp/guzzle": "~3.8",
+                "moltin/currency": "dev-master",
+                "moltin/laravel-cart": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -39,5 +42,6 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev",
+        "prefer-stable": true
 }
