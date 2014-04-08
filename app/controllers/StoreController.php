@@ -4,6 +4,8 @@ class StoreController extends BaseController{
     public function __construct() {
         parent::__construct();
         $this->beforeFilter('csrf', array('on' => 'post'));
+        $this->beforeFilter('auth', array('only' 
+            => array('postAddtocart', 'getCart', 'getRemoveitem')));
     }
     
     public function getIndex() {
